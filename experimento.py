@@ -18,9 +18,9 @@ from AlgoritmoCoTraining import AlgoritmoCoTraining
 from sklearn.metrics import accuracy_score, cohen_kappa_score
 
 sca = MinMaxScaler()
-base = 'epilepsia'
-bases = ['mnist', 'fashion', 'usps', 'cifar10','stl10','covtype','epilepsia','reuters']
-modelos = ['KNN','MLP','RF']
+base = 'matopiba'
+bases = ['mnist']
+modelos = ['KNN','MLP','RF', 'SVM']
 
 for modelo in modelos:
 
@@ -92,6 +92,5 @@ for modelo in modelos:
     resultado['KI'] = acuraciai
     resultado['KI'] = kappai
     
-    resultado.to_csv('D:/Drive UFRN/Doutorado/Resultados/Artigo KBS/Co-training/'+modelo+'/'+base+'.csv')
-    
-dados = pd.read_csv('D:/Drive UFRN/bases/slt10.csv')
+    resultado.to_csv('D:/Drive UFRN/Doutorado/Resultados/Artigo KBS/Co-training/'+modelo+'/epilepsia.csv')
+   
